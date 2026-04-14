@@ -177,6 +177,4 @@ Cette architecture constitue une première étape vers un déploiement dans un e
 ## Auteur
 
 Estelle Noukam
-Université du Québec à Chicoutimi
-Maîtrise en cybersécurité
 
