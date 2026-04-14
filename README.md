@@ -177,8 +177,6 @@ Cette architecture constitue une première étape vers un déploiement dans un e
 ## Auteur
 
 Estelle Noukam
-Université du Québec à Chicoutimi
-Maîtrise en cybersécurité
 
 ---
 
@@ -208,6 +206,7 @@ Le service `payment-service` est exposé à l'extérieur du cluster afin de perm
 
 Pour déployer l'application :
 
+```bash
 kubectl apply -f k8s/
 
 ## Vérification
