@@ -180,3 +180,43 @@ Estelle Noukam
 Université du Québec à Chicoutimi
 Maîtrise en cybersécurité
 
+---
+
+# Déploiement Kubernetes
+
+Cette branche du projet démontre la migration de l'application microservices vers **Kubernetes**.
+
+L'objectif est d'orchestrer les conteneurs sur un cluster Kubernetes afin de permettre un déploiement plus scalable et plus robuste.
+
+## Architecture Kubernetes
+
+Chaque microservice est déployé avec :
+
+- un **Deployment Kubernetes** (gestion des pods)
+- un **Service Kubernetes** (communication réseau)
+
+Services utilisés :
+
+- auth-service → ClusterIP
+- account-service → ClusterIP
+- notification-service → ClusterIP
+- payment-service → NodePort
+
+Le service `payment-service` est exposé à l'extérieur du cluster afin de permettre l'accès à l'application.
+
+## Déploiement
+
+Pour déployer l'application :
+
+kubectl apply -f k8s/
+
+## Vérification
+
+kubectl get pods
+kubectl get services
+
+## Test
+
+minikube service payment-service
+
+Cela ouvre automatiquement l'URL du service principal si non rajouter /pay à la fin du lien
